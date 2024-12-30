@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Онлайн дэлгүүр</title>
+    <!--  <link rel="stylesheet" th:href="@{/css/output.css}">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<body class="bg-gray-50 text-gray-800">
+<th:block th:include="~{fragments/header}"></th:block>
+<section class="bg-cover bg-center h-[400px] relative" style="background-image: url('https://source.unsplash.com/1600x900/?airplane,flight');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="flex flex-col items-center justify-center h-full text-white relative z-10">
+        <h2 class="text-4xl font-bold mb-4">Your Favorite Flights</h2>
+        <p class="text-lg">Save and manage the best flight deals</p>
+    </div>
+</section>
+
+<!-- Wishlist Section -->
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6">My Wishlist</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Flight Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://source.unsplash.com/400x200/?airplane" alt="Flight Image" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">New York to London</h3>
+                    <p class="text-gray-600">Direct flight with premium services</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-blue-600 font-bold">$599</span>
+                        <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flight Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://source.unsplash.com/400x200/?airlines" alt="Flight Image" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">Los Angeles to Tokyo</h3>
+                    <p class="text-gray-600">Comfortable and affordable journey</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-blue-600 font-bold">$799</span>
+                        <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flight Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://source.unsplash.com/400x200/?airport" alt="Flight Image" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">San Francisco to Paris</h3>
+                    <p class="text-gray-600">Experience the luxury and scenic views</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-blue-600 font-bold">$699</span>
+                        <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+        <p class="text-sm">&copy; 2024 Travel Co. All rights reserved.</p>
+        <p class="mt-2 text-sm">Follow us on <a href="#" class="text-blue-400 hover:underline">Instagram</a>, <a href="#" class="text-blue-400 hover:underline">Facebook</a>, and <a href="#" class="text-blue-400 hover:underline">Twitter</a>.</p>
+    </div>
+</footer>
+</body>
+</html>
